@@ -66,6 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Helper: Format Date ---
+    function formatDate(dateString) {
+        if (!dateString) return '';
+        const date = new Date(dateString);
+        if (isNaN(date.getTime())) return dateString;
+        
+        return date.toLocaleDateString('id-ID', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+    }
+
     // --- Render Posts ---
     function renderPosts(posts) {
         loadingIndicator.style.display = 'none';
@@ -96,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-content">
                     <div class="card-meta">
                         <span>${post.tema || 'Umum'}</span>
-                        <span>${post.tanggal}</span>
+                        <span>${formatDate(post.tanggal)}</span>
                     </div>
                     <h2 class="card-title">${post.judul}</h2>
                     <p class="card-excerpt">${excerpt}</p>
@@ -161,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalArticle.innerHTML = `
             <header class="modal-header">
                 <div class="modal-meta">
-                    <span>${post.tema || 'Umum'}</span> &bull; <span>${post.tanggal}</span>
+                    <span>${post.tema || 'Umum'}</span> &bull; <span>${formatDate(post.tanggal)}</span>
                 </div>
                 <h1 class="modal-title">${post.judul}</h1>
             </header>
