@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Penggunaan - Admin A's Corner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        .guide-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            line-height: 1.7;
+        }
+        .guide-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+        .guide-content h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .guide-content ol, .guide-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .guide-content li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-content a {
+            color: #007bff; /* Blue link */
+            text-decoration: none;
+        }
+        .guide-content a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header class="admin-header">
+        <h1>Panduan Admin</h1>
+        <a href="index.html" class="btn-outline">Kembali ke Dashboard</a>
+    </header>
+
+    <main class="container">
+        <div class="guide-content">
+            <h1>Panduan Penggunaan Admin A's Corner</h1>
+            <p>Selamat datang di panel admin <strong>A's Corner</strong>. Dokumen ini akan memandu Anda cara mengelola (menambah, mengedit, dan menghapus) konten website secara langsung melalui HP maupun laptop.</p>
+            
+            <h2>1. Cara Menambah Postingan Baru</h2>
+            <ol>
+                <li>Gulir ke atas ke bagian <strong>"Tulis Postingan Baru"</strong> di halaman Dashboard.</li>
+                <li>Pastikan form dalam keadaan kosong. Jika form sedang berisi data untuk diedit, klik tombol <strong>Batal Edit</strong> terlebih dahulu.</li>
+                <li><strong>Isi Kolom Data:</strong>
+                    <ul>
+                        <li><strong>Tema / Kategori:</strong> Masukkan kategori tulisan, contoh: <span class="highlight">Quotes</span>, <span class="highlight">Opini</span>, atau <span class="highlight">Informasi</span>.</li>
+                        <li><strong>Judul Tulisan:</strong> Masukkan judul postingan.</li>
+                        <li><strong>Isi Postingan:</strong> (Lihat <em>Panduan Khusus Mengisi Kolom Isi</em> di bawah).</li>
+                        <li><strong>URL Foto Utama:</strong> Masukkan URL langsung menuju foto untuk dijadikan Thumbnail.</li>
+                        <li><strong>URL Video / Link Eksternal:</strong> Opsional.</li>
+                    </ul>
+                </li>
+                <li>Klik tombol <strong>Publikasikan</strong>.</li>
+            </ol>
+
+            <h2>2. Cara Mengedit & Menghapus Postingan</h2>
+            <ul>
+                <li><strong>Edit:</strong> Gulir ke bagian "Daftar Postingan", cari judul tulisan, klik tombol <strong>Edit</strong>. Form akan otomatis terisi. Lakukan perubahan lalu klik <strong>Simpan Perubahan</strong>.</li>
+                <li><strong>Hapus:</strong> Klik tombol <strong>Hapus</strong> warna merah, lalu konfirmasi OK.</li>
+            </ul>
+
+            <h2>3. Panduan Khusus Mengisi Kolom "Isi Postingan" (Rich Text)</h2>
+            <p>Kolom "Isi Postingan" dilengkapi dengan editor visual. Anda bisa menebalkan teks, membuat poin, atau memasukkan gambar.</p>
+
+            <h3>A. Memasukkan Gambar (Sangat Penting)</h3>
+            <p>Untuk menjaga kecepatan website, sangat disarankan untuk menggunakan gambar yang ringan:</p>
+            <ul>
+                <li>Gunakan format gambar <strong>.webp</strong> atau <strong>.svg</strong> (jika ilustrasi vektor).</li>
+                <li>Upload gambar Anda ke hosting gambar gratis seperti <a href="https://imgbb.com/" target="_blank" rel="noopener noreferrer">imgbb</a>.</li>
+                <li>Setelah di-upload di <strong>imgbb</strong> atau layanan lain, salin <strong>URL langsung (Direct Link)</strong> dari gambar tersebut.</li>
+                <li>Di dalam editor tulisan, klik tombol <strong>Image (Gambar)</strong>.</li>
+                <li>Sebuah popup akan muncul meminta link gambar. Paste link gambar Anda ke sana lalu tekan OK.</li>
+                <li>Gambar akan otomatis dimasukkan dan diatur berada di tengah artikel.</li>
+            </ul>
+
+            <h3>B. Tombol Editor</h3>
+            <ul>
+                <li>Arahkan dan tahan (hover) pada tombol-tombol di editor (seperti <strong>B</strong>, <strong>I</strong>) untuk melihat penjelasan fungsinya.</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
