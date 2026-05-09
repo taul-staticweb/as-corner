@@ -93,6 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function formatDate(dateString) {
+        if (!dateString) return '';
+        const date = new Date(dateString);
+        if (isNaN(date.getTime())) return dateString;
+        return date.toLocaleDateString('id-ID', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+    }
+
     function renderTable(posts) {
         postTbody.innerHTML = '';
         if (posts.length === 0) {
@@ -103,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         posts.forEach(post => {
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${post.tanggal}</td>
+                <td>${formatDate(post.tanggal)}</td>
                 <td><strong>${post.judul}</strong></td>
                 <td>${post.tema}</td>
                 <td class="action-buttons">
